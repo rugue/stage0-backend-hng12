@@ -24,7 +24,11 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is a public API built with NestJS that returns:
+
+- Registered email address
+- Current datetime in ISO 8601 format
+- GitHub URL of the project's codebase
 
 ## Project setup
 
