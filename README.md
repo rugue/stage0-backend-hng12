@@ -1,103 +1,86 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# API Documentation
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Project Description
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project is a simple REST API built using TypeScript and NestJS. It provides a single endpoint that returns a JSON response containing the developer's email, the current UTC datetime, and the GitHub repository URL. The API is designed to be publicly accessible and follows best practices for CORS handling and structured responses.
 
-## Description
+## Setup Instructions
 
-This is a public API built with NestJS that returns:
+### Prerequisites
 
-- Registered email address
-- Current datetime in ISO 8601 format
-- GitHub URL of the project's codebase
+- Node.js (v16 or later)
+- npm or yarn
+- Git
 
-## Project setup
+### Installation
 
-```bash
-$ npm install
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/rugue/stage0-backend-hng12.git
+   cd stage0-backend-hng12
+   ```
+2. **Install dependencies**:
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+3. **Run the project locally**:
+
+   ```sh
+   npm run start
+   # or
+   yarn start
+   ```
+
+4. **API will be available at**:
+   ```
+   http://localhost:3000
+   ```
+
+## API Documentation
+
+### Endpoint URL
+
+- **Base URL (Deployed API)**: [https://stage0-backend-hng12-3qg2uchjw-osarugue-enehizenas-projects.vercel.app/api](https://stage0-backend-hng12-3qg2uchjw-osarugue-enehizenas-projects.vercel.app/api)
+
+### Request & Response Format
+
+#### **GET /**
+
+**Response (200 OK):**
+
+```json
+{
+  "email": "nehirugue@gmail.com",
+  "current_datetime": "2025-01-30T09:30:00Z",
+  "github_url": "https://github.com/rugue/stage0-backend-hng12"
+}
 ```
 
-## Compile and run the project
+### Usage Example
 
-```bash
-# development
-$ npm run start
+#### Using `curl`:
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```sh
+curl -X GET https://stage0-backend-hng12-3qg2uchjw-osarugue-enehizenas-projects.vercel.app/
 ```
 
-## Run tests
+#### Using Postman:
 
-```bash
-# unit tests
-$ npm run test
+1. Open Postman.
+2. Create a new request.
+3. Set method to `GET`.
+4. Enter `https://stage0-backend-hng12-3qg2uchjw-osarugue-enehizenas-projects.vercel.app/api` as the URL.
+5. Click "Send" to receive the JSON response.
 
-# e2e tests
-$ npm run test:e2e
+## Backlinks
 
-# test coverage
-$ npm run test:cov
-```
+- [Hire Python Developers](https://hng.tech/hire/python-developers)
+- [Hire C# Developers](https://hng.tech/hire/csharp-developers)
+- [Hire Golang Developers](https://hng.tech/hire/golang-developers)
+- [Hire PHP Developers](https://hng.tech/hire/php-developers)
+- [Hire Java Developers](https://hng.tech/hire/java-developers)
+- [Hire Node.js Developers](https://hng.tech/hire/nodejs-developers)
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+---
