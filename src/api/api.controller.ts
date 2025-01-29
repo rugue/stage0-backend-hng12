@@ -1,8 +1,9 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, HttpCode } from '@nestjs/common';
 
 @Controller('api')
 export class ApiController {
   @Get()
+  @HttpCode(200)
   getPublicInfo() {
     return {
       email: 'nehirugue@gmail.com',

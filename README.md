@@ -63,7 +63,7 @@ This project is a simple REST API built using TypeScript and NestJS. It provides
 #### Using `curl`:
 
 ```sh
-curl -X GET https://stage0-backend-hng12-3qg2uchjw-osarugue-enehizenas-projects.vercel.app/
+curl -X GET https://stage0-backend-hng12-3qg2uchjw-osarugue-enehizenas-projects.vercel.app/api
 ```
 
 #### Using Postman:
