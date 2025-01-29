@@ -8,7 +8,7 @@ export class ApiController {
     return {
       email: 'nehirugue@gmail.com',
       current_datetime: new Date().toISOString(),
-      github_url: 'https://github.com/rugue/stage0-backend-hng12',
+      github_url: 'https://github.com/rugue/stage0-backend-hng12.git',
     };
   }
 }
